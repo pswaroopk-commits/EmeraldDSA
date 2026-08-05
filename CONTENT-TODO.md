@@ -1,0 +1,22 @@
+# Content To Confirm Before Publication
+
+- Confirm final owner display name. The supplied visiting-card artwork shows `Mr. KUMAR GANESH`; the working site uses `Mr. Kumar Ganesh`.
+- Confirm primary call number: `7989251135` or `9848263494`.
+- Confirm WhatsApp number and whether both numbers should support WhatsApp.
+- Provide complete office address with PIN code.
+- Provide exact Google Maps sharing link or embed link.
+- Confirm business hours.
+- Confirm that the supplied Emerald DSA artwork may be used as the website logo and brand image.
+- Confirm that the supplied proprietor photograph is approved for public website use.
+- Provide any genuine team photographs if a broader team section should be shown.
+- Confirm exact service list and remove services not currently handled.
+- Clarify whether vehicle refinancing and loan against OD or related property facilities should be included.
+- Confirm whether the business currently works with each listed bank or financial institution.
+- Confirm correct relationship wording for financial institutions.
+- Confirm public logo-use permission before displaying bank or institution logos.
+- Confirm whether either supplied email address should be published. The artwork includes `emeralddsa@gamil.com`, which appears to be a spelling error, and `ganeshkumark@yahoo.com`; neither is shown on the website.
+- Provide approved customer testimonials with customer permission, name or initials, location and loan type.
+- Review and approve disclaimer wording.
+- Review and approve privacy wording.
+- Confirm preferred canonical domain.
+- Replace placeholder canonical, Open Graph, sitemap and robots URLs with the final live domain.
