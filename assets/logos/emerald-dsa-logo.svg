@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="380" height="104" viewBox="0 0 380 104" role="img" aria-labelledby="title desc">
+  <title id="title">Emerald DSA logo placeholder</title>
+  <desc id="desc">Placeholder logo using navy, gold and white until the official logo file is supplied.</desc>
+  <rect width="380" height="104" rx="8" fill="#0f2746"/>
+  <path d="M27 64h54v22H27z" fill="#ffffff"/>
+  <path d="M20 65 54 31l34 34H75L54 44 33 65z" fill="#f2d486"/>
+  <path d="M44 66h20v20H44z" fill="#173a63"/>
+  <path d="M89 56h30c6 0 12 5 14 11l2 6h-8a10 10 0 0 1-20 0h-20a10 10 0 0 1-20 0h-8l5-12c2-4 6-5 10-5h15z" fill="#c99a3e"/>
+  <circle cx="77" cy="73" r="6" fill="#0f2746"/>
+  <circle cx="117" cy="73" r="6" fill="#0f2746"/>
+  <text x="152" y="47" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="800" letter-spacing="0">Emerald DSA</text>
+  <text x="153" y="75" fill="#f2d486" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" letter-spacing="0">Your Trusted Loan Partner</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Emerald DSA social preview placeholder</title>
+  <desc id="desc">Navy and gold social preview for Emerald DSA loan assistance in Visakhapatnam.</desc>
+  <rect width="1200" height="630" fill="#0f2746"/>
+  <path d="M0 500 1200 365v265H0z" fill="#173a63"/>
+  <rect x="96" y="96" width="1008" height="438" rx="8" fill="#ffffff"/>
+  <path d="M140 385 250 270l110 115h-45l-65-66-65 66z" fill="#c99a3e"/>
+  <rect x="178" y="386" width="145" height="76" fill="#0f2746"/>
+  <rect x="230" y="413" width="38" height="49" fill="#f2d486"/>
+  <text x="410" y="250" fill="#0f2746" font-family="Arial, Helvetica, sans-serif" font-size="76" font-weight="800" letter-spacing="0">Emerald DSA</text>
+  <text x="414" y="317" fill="#c99a3e" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="800" letter-spacing="0">Your Trusted Loan Partner</text>
+  <text x="414" y="390" fill="#152238" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="700" letter-spacing="0">Loan assistance in Visakhapatnam</text>
+  <text x="414" y="438" fill="#5e6b7b" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="600" letter-spacing="0">Home, vehicle, property, business and personal loans</text>
+</svg>
