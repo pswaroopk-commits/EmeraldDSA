@@ -1,6 +1,6 @@
 # Content To Confirm Before Publication
 
-- Confirm final owner display name. The supplied visiting-card artwork shows `Mr. KUMAR GANESH`; the working site uses `Mr. Kumar Ganesh`.
+- Confirm final owner display name if needed. The working site uses `Mr. Ganesh Kumar`.
 - Confirm primary call number: `7989251135` or `9848263494`.
 - Confirm WhatsApp number and whether both numbers should support WhatsApp.
 - Provide complete office address with PIN code.

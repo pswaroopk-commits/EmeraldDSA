@@ -1,7 +1,7 @@
 const SITE_CONFIG = {
   businessName: "Emerald DSA",
   tagline: "Your Trusted Loan Partner",
-  ownerDisplayName: "Mr. Kumar Ganesh",
+  ownerDisplayName: "Mr. Ganesh Kumar",
   primaryPhone: "7989251135",
   secondaryPhone: "9848263494",
   whatsappPhone: "7989251135",
@@ -46,15 +46,9 @@ const SITE_CONFIG = {
   team: [
     {
       role: "Owner / Proprietor",
-      note: "Mr. Kumar Ganesh",
+      note: "Mr. Ganesh Kumar",
       image: "assets/images/ganesh-kumar.webp",
-      alt: "Mr. Kumar Ganesh, Emerald DSA proprietor"
-    },
-    {
-      role: "Loan Assistance Team",
-      note: "Genuine team photograph pending",
-      image: "",
-      alt: ""
+      alt: "Mr. Ganesh Kumar, Emerald DSA proprietor"
     }
   ],
   testimonials: Array.from({ length: 5 }, (_, index) => [
