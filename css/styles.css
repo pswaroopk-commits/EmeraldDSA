@@ -360,6 +360,7 @@ main h1 {
 
 .hero-panel-model {
   position: relative;
+  justify-items: end;
 }
 
 .hero-card,
@@ -428,7 +429,10 @@ main h1 {
 
 .model-hero-media {
   position: relative;
-  min-height: 420px;
+  width: min(100%, 420px);
+  max-height: 650px;
+  aspect-ratio: 1004 / 1567;
+  min-height: 0;
   margin: 0;
   overflow: hidden;
   border: 1px solid rgba(246, 217, 133, 0.7);
@@ -442,23 +446,23 @@ main h1 {
   inset: 0;
   z-index: 1;
   background:
-    linear-gradient(180deg, rgba(7, 25, 47, 0.08), rgba(7, 25, 47, 0.34)),
-    linear-gradient(90deg, rgba(7, 25, 47, 0.26), transparent 48%);
+    linear-gradient(180deg, rgba(7, 25, 47, 0), rgba(7, 25, 47, 0.2)),
+    linear-gradient(90deg, rgba(7, 25, 47, 0.1), transparent 48%);
   content: "";
 }
 
 .model-hero-media img {
   width: 100%;
   height: 100%;
-  min-height: 420px;
-  object-fit: cover;
-  object-position: center;
+  min-height: 0;
+  object-fit: contain;
+  object-position: center top;
 }
 
 .model-hero-media figcaption {
   position: absolute;
-  top: 46px;
-  right: 52px;
+  right: 24px;
+  bottom: 24px;
   z-index: 2;
   display: grid;
   gap: 1px;
@@ -703,10 +707,10 @@ main h1 {
 
 .about-photo {
   width: 100%;
-  max-height: 450px;
+  max-height: 520px;
   margin-bottom: 20px;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 18%;
   border-radius: var(--radius);
   border: 1px solid var(--line);
 }
@@ -790,7 +794,7 @@ main h1 {
   aspect-ratio: 4 / 3;
   margin-bottom: 16px;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 18%;
   border-radius: var(--radius);
   border: 1px solid var(--line);
 }
@@ -1095,7 +1099,8 @@ main h1 {
 
   .model-hero-media,
   .model-hero-media img {
-    min-height: 300px;
+    width: 100%;
+    max-height: none;
   }
 
   .hero-service-pills {
@@ -1200,11 +1205,6 @@ main h1 {
 
 .hero-lede {
   max-width: 520px;
-}
-
-.model-hero-media,
-.model-hero-media img {
-  min-height: 360px;
 }
 
 .trust-strip {
@@ -1386,7 +1386,8 @@ main h1 {
 
   .model-hero-media,
   .model-hero-media img {
-    min-height: 300px;
+    width: 100%;
+    max-height: none;
   }
 
   .trust-grid {
