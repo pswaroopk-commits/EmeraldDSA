@@ -28,7 +28,7 @@
         "@context": "https://schema.org",
         "@type": "FinancialService",
         "name": "Emerald DSA",
-        "description": "Bank loan assistance and facilitation services for home loans, car loans, mortgage loans, business loans and Mudra loans in Visakhapatnam, Andhra Pradesh.",
+        "description": "Bank loan assistance and facilitation services for home loans, car loans, mortgage loans, business loans, personal loans, insurance services and Mudra loans across Andhra Pradesh and Telangana.",
         "telephone": ["+917989251135", "+919848263494"],
         "address": {
           "@type": "PostalAddress",
@@ -38,14 +38,23 @@
           "postalCode": "PIN to be confirmed",
           "addressCountry": "IN"
         },
-        "areaServed": "Visakhapatnam, Andhra Pradesh",
-        "serviceType": ["Bank loan assistance", "Home loan assistance", "Car loan assistance", "Mortgage loan assistance", "Business loan assistance", "Mudra loan assistance"],
+        "areaServed": ["Andhra Pradesh", "Telangana", "Visakhapatnam"],
+        "serviceType": ["Bank loan assistance", "Home loan assistance", "Car loan assistance", "Mortgage loan assistance", "Business loan assistance", "Personal loan assistance", "Mudra loan assistance", "General insurance services", "Health insurance services"],
         "url": "https://emerald-dsa.p-swaroopk.workers.dev/"
       }
     </script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="top-contact-bar" aria-label="Quick contact details">
+      <div class="container top-contact-inner">
+        <a href="mailto:emeralddsa@gamil.com">emeralddsa@gamil.com</a>
+        <span>7989251135</span>
+        <span>9848263494</span>
+        <span>Andhra Pradesh &amp; Telangana</span>
+      </div>
+    </div>
 
     <header class="site-header" data-header>
       <div class="container header-inner">
@@ -61,7 +70,8 @@
           <a href="#services">Services</a>
           <a href="#about">About Us</a>
           <a href="#why-us">Why Choose Us</a>
-          <a href="#services">Partners</a>
+          <a href="#partners">Partners</a>
+          <a href="#faq">FAQ</a>
           <a href="#testimonials" data-nav-feature="testimonials">Testimonials</a>
           <a href="#contact">Contact</a>
         </nav>
@@ -76,12 +86,18 @@
       <section class="hero" id="home" aria-labelledby="hero-title">
         <div class="container hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow">MVP Colony, Visakhapatnam</p>
+            <p class="eyebrow">Andhra Pradesh &amp; Telangana</p>
             <h1 id="hero-title">Your Dreams. Our Commitment.</h1>
-            <p class="hero-lede">We make your bank loan journey in Visakhapatnam simple, clear and trustworthy with professional guidance for home, car, mortgage, business and personal loan enquiries.</p>
+            <p class="hero-lede">We make your loan journey simple, transparent, and hassle-free with expert guidance for Home Loans, Car Loans, Mortgage Loans, Business Loans, and Personal Loans.</p>
             <div class="hero-actions">
               <a class="button button-primary" data-phone-link href="tel:+917989251135">Call Now</a>
               <a class="button button-whatsapp" data-whatsapp-link href="https://wa.me/917989251135?text=Hello%20Emerald%20DSA%2C%20I%20would%20like%20assistance%20regarding%20a%20loan.%20Please%20contact%20me.">WhatsApp Us</a>
+            </div>
+            <div class="hero-badges" aria-label="Service highlights">
+              <span>Apply on call</span>
+              <span>Quick guidance</span>
+              <span>Clear documents</span>
+              <span>Bank coordination</span>
             </div>
           </div>
           <div class="hero-panel hero-panel-model" aria-label="Emerald DSA service summary">
@@ -98,24 +114,37 @@
 
       <section class="trust-strip" aria-label="Trust highlights">
         <div class="container trust-grid">
-          <article><strong>Fast</strong><span>Processing Guidance</span></article>
-          <article><strong>Clear</strong><span>Documentation Support</span></article>
-          <article><strong>Multiple</strong><span>Loan Categories</span></article>
-          <article><strong>Expert</strong><span>Financial Guidance</span></article>
-          <article><strong>Local</strong><span>Visakhapatnam Support</span></article>
+          <article><strong>Quick Approval</strong><span>Fast Loan Assistance</span></article>
+          <article><strong>Transparent Process</strong><span>No Hidden Charges</span></article>
+          <article><strong>Trusted Partners</strong><span>Leading Banks &amp; NBFCs</span></article>
+          <article><strong>Expert Guidance</strong><span>25+ Years Experience</span></article>
+          <article><strong>Personalized</strong><span>Solutions for Every Customer</span></article>
         </div>
       </section>
 
       <section class="section" id="services" aria-labelledby="services-title">
         <div class="container">
           <div class="section-heading">
-            <p class="eyebrow">Services & Partners</p>
-            <h2 id="services-title">Loan Services and Banking Partners</h2>
-            <p>Bank loan assistance in Visakhapatnam for home, car, mortgage, business, Mudra and related loan enquiries, with partner details shown in one compact view.</p>
+            <p class="eyebrow">Loan &amp; Insurance Services</p>
+            <h2 id="services-title">Our Services and Banking Partners</h2>
+            <p>Choose the loan support you need and start the enquiry directly on WhatsApp.</p>
           </div>
-          <figure class="services-overview">
-            <img src="assets/images/services-partners-overview.jpg" alt="Emerald DSA home loan services, car loan services and banking partner details" width="1599" height="958" loading="eager">
-          </figure>
+          <div class="insurance-callout">
+            <strong>General Insurance &amp; Health Insurance Services</strong>
+            <span>In association with HDFC ERGO</span>
+          </div>
+          <div class="service-grid" data-services></div>
+        </div>
+      </section>
+
+      <section class="section section-partners" id="partners" aria-labelledby="partners-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Banking Network</p>
+            <h2 id="partners-title">Banking Partners</h2>
+            <p>Loan options are coordinated with banks, housing finance companies and financial institutions based on customer profile and lender policy.</p>
+          </div>
+          <img class="partner-strip-image" src="assets/logos/partners/banking-partners-strip.webp" alt="HDFC Bank, LIC HFL, ICICI Bank, Indian Bank, SBI, Axis Bank, Kotak Mahindra Bank, Bank of Baroda, Union Bank of India, Canara Bank and New India Assurance partner logos" width="1536" height="260" loading="eager">
         </div>
       </section>
 
@@ -123,12 +152,15 @@
         <div class="container split-layout">
           <div>
             <p class="eyebrow">About Emerald DSA</p>
-            <h2 id="about-title">Established local loan guidance in Visakhapatnam</h2>
-            <p>Emerald DSA is a loan assistance and facilitation service based in Visakhapatnam. Led by <span data-owner-name>Mr. Ganesh Kumar</span>, the business assists individuals and businesses with understanding loan options, documentation requirements and coordination with banks and financial institutions.</p>
-            <p class="note">Owner name, complete address and business story must be confirmed before publication.</p>
+            <h2 id="about-title">About Us</h2>
+            <p><strong>Mr. Kumar Ganesh</strong></p>
+            <p>With nearly 25+ years of experience in the banking and financial services industry, Mr. Kumar Ganesh is committed to helping customers find the right loan and insurance solutions with honesty, transparency, and personalized guidance. His customer-first approach, expertise in handling complex cases, and dedication to securing the best possible financial options have earned him the trust of thousands of satisfied clients.</p>
+            <p>Recognized with multiple awards from leading financial institutions, he continues to build lasting relationships through integrity, professionalism, and exceptional service.</p>
+            <p>Throughout his career, he has earned multiple recognitions from leading financial institutions for his consistent performance and commitment to excellence. His focus on transparency, personalized guidance, and long-term customer relationships has established him as a trusted financial advisor.</p>
+            <p class="note"><strong>Mission:</strong> To understand every customer's needs, provide the best financial solutions, and deliver service that exceeds expectations.</p>
           </div>
           <div class="about-panel">
-            <img class="about-photo" src="assets/images/ganesh-kumar.webp" alt="Mr. Ganesh Kumar, Emerald DSA proprietor" width="549" height="1200" loading="lazy">
+            <img class="about-photo" src="assets/images/ganesh-kumar.webp" alt="Mr. Kumar Ganesh, Emerald DSA proprietor" width="549" height="1200" loading="eager">
             <h3>Your Trusted Loan Partner</h3>
             <dl>
               <div><dt>Location</dt><dd>MVP Colony, Visakhapatnam</dd></div>
@@ -154,11 +186,20 @@
         </div>
       </section>
 
+      <section class="achievement-band" aria-label="Emerald DSA highlights">
+        <div class="container achievement-grid">
+          <article><strong>25+ Years</strong><span>Experience</span></article>
+          <article><strong>Home & Car</strong><span>Loan Assistance</span></article>
+          <article><strong>Multiple</strong><span>Banking Partners</span></article>
+          <article><strong>Local</strong><span>Visakhapatnam Guidance</span></article>
+        </div>
+      </section>
+
       <section class="section" id="team" aria-labelledby="team-title">
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">Team</p>
-            <h2 id="team-title">Guidance Led by Mr. Ganesh Kumar</h2>
+            <h2 id="team-title">Guidance Led by Mr. Kumar Ganesh</h2>
           </div>
           <div class="team-grid" data-team></div>
         </div>
@@ -175,16 +216,44 @@
         </div>
       </section>
 
+      <section class="section" id="faq" aria-labelledby="faq-title">
+        <div class="container faq-layout">
+          <div>
+            <p class="eyebrow">FAQ</p>
+            <h2 id="faq-title">Common Loan Questions</h2>
+            <p>These answers help with the first conversation. Final eligibility, rates and approval are always decided by the lender.</p>
+          </div>
+          <div class="faq-list">
+            <details open>
+              <summary>Which loan services does Emerald DSA support?</summary>
+              <p>Home, car, mortgage, business, personal, Mudra, top-up, construction and loan-against-property enquiries.</p>
+            </details>
+            <details>
+              <summary>Can I apply by phone or WhatsApp?</summary>
+              <p>Yes. You can call or send a WhatsApp enquiry, then the team will guide you through the next documents and lender process.</p>
+            </details>
+            <details>
+              <summary>Does Emerald DSA approve loans directly?</summary>
+              <p>No. Emerald DSA assists with guidance and coordination. The bank or financial institution decides eligibility, approval and final terms.</p>
+            </details>
+            <details>
+              <summary>What documents are usually discussed first?</summary>
+              <p>Identity proof, address proof, income details, bank statements and property or vehicle details may be requested depending on the loan type.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
       <section class="section contact-section" id="contact" aria-labelledby="contact-title">
         <div class="container contact-grid">
           <div>
             <p class="eyebrow">Contact</p>
-            <h2 id="contact-title">Speak with Emerald DSA</h2>
+            <h2 id="contact-title">Apply on call with Emerald DSA</h2>
             <p>Call or message to discuss loan assistance. Please avoid sharing confidential documents until you have verified the recipient and the required process.</p>
             <div class="contact-cards">
               <article>
                 <h3>Business Owner</h3>
-                <p data-owner-name>Mr. Ganesh Kumar</p>
+                <p data-owner-name>Mr. Kumar Ganesh</p>
               </article>
               <article>
                 <h3>Phone</h3>
@@ -205,14 +274,34 @@
               <a class="button button-whatsapp" data-whatsapp-link href="https://wa.me/917989251135?text=Hello%20Emerald%20DSA%2C%20I%20would%20like%20assistance%20regarding%20a%20loan.%20Please%20contact%20me.">WhatsApp</a>
             </div>
           </div>
-          <div class="map-card">
-            <div class="map-preview" role="img" aria-label="Map preview placeholder for MVP Colony, Visakhapatnam">
-              <span>MVP Colony</span>
-              <strong>Visakhapatnam</strong>
-              <small>Exact Google Maps preview pending</small>
-            </div>
-            <a class="button button-outline button-full" data-map-link href="https://www.google.com/maps/search/?api=1&amp;query=MVP%20Colony%2C%20Visakhapatnam%2C%20Andhra%20Pradesh" target="_blank" rel="noopener">Open in Google Maps</a>
-          </div>
+          <form class="lead-form" data-lead-form>
+            <h3>Send a Loan Enquiry</h3>
+            <label>
+              <span>Your Name</span>
+              <input type="text" name="name" autocomplete="name" required>
+            </label>
+            <label>
+              <span>Phone Number</span>
+              <input type="tel" name="phone" autocomplete="tel" required>
+            </label>
+            <label>
+              <span>Loan Type</span>
+              <select name="loanType" required>
+                <option value="">Select loan type</option>
+                <option>Home Loan</option>
+                <option>Car Loan</option>
+                <option>Mortgage Loan</option>
+                <option>Business Loan</option>
+                <option>Personal Loan</option>
+                <option>Mudra Loan</option>
+              </select>
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="4" placeholder="Tell us what support you need"></textarea>
+            </label>
+            <button class="button button-primary button-full" type="submit">Submit on WhatsApp</button>
+          </form>
         </div>
       </section>
 

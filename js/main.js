@@ -1,7 +1,7 @@
 const SITE_CONFIG = {
   businessName: "Emerald DSA",
   tagline: "Your Trusted Loan Partner",
-  ownerDisplayName: "Mr. Ganesh Kumar",
+  ownerDisplayName: "Mr. Kumar Ganesh",
   primaryPhone: "7989251135",
   secondaryPhone: "9848263494",
   whatsappPhone: "7989251135",
@@ -15,20 +15,15 @@ const SITE_CONFIG = {
     team: true
   },
   services: [
-    ["Home Loan", "Guidance for home-purchase loan enquiries and lender documentation.", "home-loan"],
-    ["Car Loan", "Support for new and used vehicle loan options and documentation.", "car-loan"],
-    ["Mortgage Loan", "Coordination support for mortgage-backed loan enquiries.", "mortgage-loan"],
-    ["Business Loan", "Assistance for business finance enquiries and lender coordination.", "business-loan"],
-    ["Personal Loan", "Guidance for personal loan enquiries based on lender policies.", "personal-loan"],
-    ["Mudra Loan", "Support for Mudra loan information and documentation requirements.", "mudra-loan"],
-    ["Top-Up Loan", "Guidance for top-up options subject to lender eligibility checks.", "top-up-loan"],
-    ["Construction Loan", "Guidance for construction-related loan documentation and next steps.", "construction-loan"],
-    ["Home Loan Takeover", "Assistance reviewing transfer options for an existing home loan.", "home-loan"],
-    ["Home Loan Top-Up", "Support for enquiries about additional funding on an eligible home loan.", "home-loan"],
-    ["Loan Against Property", "Assistance for property-backed funding enquiries.", "mortgage-loan"],
-    ["New Car Loan", "Support for new vehicle loan options and documentation.", "car-loan"],
-    ["Used Car Loan", "Guidance for pre-owned vehicle loan enquiries.", "car-loan"],
-    ["MSME Loan", "Assistance for MSME finance enquiries and lender process coordination.", "business-loan"]
+    ["Home Loan", "Support for new purchase, takeover and top-up home loan enquiries.", "home-loan"],
+    ["Car Loan", "Guidance for new and used vehicle loan options and documents.", "car-loan"],
+    ["Mortgage Loan", "Assistance for property-backed loan enquiries and lender coordination.", "mortgage-loan"],
+    ["Business Loan", "Support for working capital, expansion and business finance enquiries.", "business-loan"],
+    ["Personal Loan", "Guidance for personal loan eligibility conversations and next steps.", "personal-loan"],
+    ["Mudra Loan", "Help understanding Mudra loan information and documentation needs.", "mudra-loan"],
+    ["Top-Up Loan", "Support for additional funding enquiries on eligible existing loans.", "top-up-loan"],
+    ["Construction Loan", "Guidance for residential and commercial construction loan needs.", "construction-loan"],
+    ["Loan Against Property", "Assistance for secured funding enquiries against property.", "mortgage-loan"]
   ],
   partners: [
     ["HDFC Bank", "hdfc-bank"],
@@ -46,9 +41,9 @@ const SITE_CONFIG = {
   team: [
     {
       role: "Owner / Proprietor",
-      note: "Mr. Ganesh Kumar",
+      note: "Mr. Kumar Ganesh",
       image: "assets/images/ganesh-kumar.webp",
-      alt: "Mr. Ganesh Kumar, Emerald DSA proprietor"
+      alt: "Mr. Kumar Ganesh, Emerald DSA proprietor"
     }
   ],
   testimonials: Array.from({ length: 5 }, (_, index) => [
@@ -98,7 +93,7 @@ if (servicesRoot) {
   servicesRoot.innerHTML = SITE_CONFIG.services
     .map(([name, description, imageName]) => `
       <article class="service-card">
-        <img src="assets/images/services/${imageName}.webp" alt="${name} visual" width="520" height="320" loading="lazy">
+        <img src="assets/images/services/${imageName}.webp" alt="${name} visual" width="520" height="320" loading="eager">
         <div class="service-card-body">
           <span class="service-icon" aria-hidden="true">${name.charAt(0)}</span>
           <h3>${name}</h3>
@@ -128,7 +123,7 @@ if (teamRoot) {
     .map(({ role, note, image, alt }) => `
       <article class="team-card">
         ${image
-          ? `<img class="team-photo" src="${image}" alt="${alt}" width="760" height="950" loading="lazy">`
+          ? `<img class="team-photo" src="${image}" alt="${alt}" width="760" height="950" loading="eager">`
           : `<div class="team-photo-placeholder">Photo placeholder<br>${note}</div>`}
         <h3>${role}</h3>
         <p>${image ? note : "Replace this placeholder only with a genuine approved photograph."}</p>
@@ -142,6 +137,27 @@ if (testimonialsRoot) {
   testimonialsRoot.innerHTML = SITE_CONFIG.testimonials
     .map(([name, quote]) => `<article class="testimonial-card"><h3>${name}</h3><p>${quote}</p></article>`)
     .join("");
+}
+
+const leadForm = document.querySelector("[data-lead-form]");
+if (leadForm) {
+  leadForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const formData = new FormData(leadForm);
+    const name = String(formData.get("name") || "").trim();
+    const phone = String(formData.get("phone") || "").trim();
+    const loanType = String(formData.get("loanType") || "").trim();
+    const message = String(formData.get("message") || "").trim();
+    const enquiry = [
+      "Hello Emerald DSA, I want loan assistance.",
+      name ? `Name: ${name}` : "",
+      phone ? `Phone: ${phone}` : "",
+      loanType ? `Loan Type: ${loanType}` : "",
+      message ? `Message: ${message}` : ""
+    ].filter(Boolean).join("\n");
+
+    window.location.href = `https://wa.me/91${SITE_CONFIG.whatsappPhone}?text=${encodeURIComponent(enquiry)}`;
+  });
 }
 
 document.querySelectorAll("[data-feature]").forEach((section) => {
