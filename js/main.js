@@ -23,7 +23,7 @@ const SITE_CONFIG = {
     ["Mudra Loan", "Help understanding Mudra loan information and documentation needs.", "mudra-loan"],
     ["Top-Up Loan", "Support for additional funding enquiries on eligible existing loans.", "top-up-loan"],
     ["Construction Loan", "Guidance for residential and commercial construction loan needs.", "construction-loan"],
-    ["Loan Against Property", "Assistance for secured funding enquiries against property.", "mortgage-loan"]
+    ["Loan Against Property", "Assistance for secured funding enquiries against property.", "loan-against-property"]
   ],
   partners: [
     ["HDFC Bank", "hdfc-bank"],
