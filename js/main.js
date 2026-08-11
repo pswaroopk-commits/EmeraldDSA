@@ -5,7 +5,7 @@ const SITE_CONFIG = {
   primaryPhone: "7989251135",
   secondaryPhone: "9848263494",
   whatsappPhone: "7989251135",
-  whatsappMessage: "Hello Emerald DSA, I would like assistance regarding a loan. Please contact me.",
+  whatsappMessage: "Hello Emerald DSA,\nI am interested in availing a loan. Please contact me regarding the loan process.\nThank you.",
   address: "Complete address to be confirmed, MVP Colony, Visakhapatnam, Andhra Pradesh",
   businessHours: "To be confirmed before publication",
   mapsLink: "https://www.google.com/maps/search/?api=1&query=MVP%20Colony%2C%20Visakhapatnam%2C%20Andhra%20Pradesh",
@@ -149,7 +149,7 @@ if (leadForm) {
     const loanType = String(formData.get("loanType") || "").trim();
     const message = String(formData.get("message") || "").trim();
     const enquiry = [
-      "Hello Emerald DSA, I want loan assistance.",
+      SITE_CONFIG.whatsappMessage,
       name ? `Name: ${name}` : "",
       phone ? `Phone: ${phone}` : "",
       loanType ? `Loan Type: ${loanType}` : "",
