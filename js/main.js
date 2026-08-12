@@ -47,14 +47,12 @@ const SITE_CONFIG = {
     }
   ],
   awards: [
-    ["Certificate of Association", "assets/images/awards/award-01.webp"],
-    ["Certificate of Excellence", "assets/images/awards/award-02.webp"],
-    ["Partner Recognition Plaque", "assets/images/awards/award-03.webp"],
-    ["Top Performer Trophy", "assets/images/awards/award-04.webp"],
-    ["Certificate of Appreciation", "assets/images/awards/award-05.webp"],
-    ["Performance Trophy", "assets/images/awards/award-06.webp"],
-    ["Top Performer Award", "assets/images/awards/award-07.webp"],
-    ["Financial Services Recognition", "assets/images/awards/award-08.webp"]
+    ["Award & Recognition", "assets/images/awards/award-01.webp"],
+    ["Award & Recognition", "assets/images/awards/award-02.webp"],
+    ["Award & Recognition", "assets/images/awards/award-03.webp"],
+    ["Award & Recognition", "assets/images/awards/award-04.webp"],
+    ["Award & Recognition", "assets/images/awards/award-05.webp"],
+    ["Award & Recognition", "assets/images/awards/award-06.webp"]
   ],
   testimonials: Array.from({ length: 5 }, (_, index) => [
     `Sample testimonial ${index + 1}`,
@@ -173,9 +171,26 @@ if (awardsCarousel && awardsTrack && awardsDots) {
     .join("");
 
   const dotButtons = [...awardsDots.querySelectorAll("button")];
+  const awardImages = [...awardsTrack.querySelectorAll("img")];
+  const setAwardsHeight = () => {
+    const activeImage = awardImages[awardIndex];
+    if (!activeImage) return;
+
+    const carouselWidth = awardsCarousel.getBoundingClientRect().width;
+    const naturalWidth = activeImage.naturalWidth || 1448;
+    const naturalHeight = activeImage.naturalHeight || 1086;
+    const calculatedHeight = Math.round((carouselWidth / naturalWidth) * naturalHeight);
+    const maxHeight = window.matchMedia("(max-width: 760px)").matches ? 620 : 480;
+    const minHeight = window.matchMedia("(max-width: 760px)").matches ? 280 : 210;
+    const nextHeight = Math.min(Math.max(calculatedHeight, minHeight), maxHeight);
+
+    awardsTrack.style.setProperty("--award-carousel-height", `${nextHeight}px`);
+  };
+
   const updateAwards = (nextIndex) => {
     awardIndex = (nextIndex + SITE_CONFIG.awards.length) % SITE_CONFIG.awards.length;
     awardsTrack.style.transform = `translateX(-${awardIndex * 100}%)`;
+    setAwardsHeight();
     dotButtons.forEach((button, index) => {
       button.classList.toggle("is-active", index === awardIndex);
       button.setAttribute("aria-current", index === awardIndex ? "true" : "false");
@@ -185,7 +200,7 @@ if (awardsCarousel && awardsTrack && awardsDots) {
   const stopAutoplay = () => window.clearInterval(autoplayId);
   const startAutoplay = () => {
     stopAutoplay();
-    autoplayId = window.setInterval(() => updateAwards(awardIndex + 1), 4200);
+    autoplayId = window.setInterval(() => updateAwards(awardIndex + 1), 3000);
   };
 
   document.querySelector("[data-awards-prev]")?.addEventListener("click", () => {
@@ -209,6 +224,11 @@ if (awardsCarousel && awardsTrack && awardsDots) {
   awardsCarousel.addEventListener("pointerleave", startAutoplay);
   awardsCarousel.addEventListener("focusin", stopAutoplay);
   awardsCarousel.addEventListener("focusout", startAutoplay);
+  window.addEventListener("resize", setAwardsHeight);
+  awardImages.forEach((image) => {
+    if (image.complete) return;
+    image.addEventListener("load", setAwardsHeight, { once: true });
+  });
   updateAwards(0);
   startAutoplay();
 }
