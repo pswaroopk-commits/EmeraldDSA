@@ -46,6 +46,16 @@ const SITE_CONFIG = {
       alt: "Mr. Kumar Ganesh, Emerald DSA proprietor"
     }
   ],
+  awards: [
+    ["Certificate of Association", "assets/images/awards/award-01.webp"],
+    ["Certificate of Excellence", "assets/images/awards/award-02.webp"],
+    ["Partner Recognition Plaque", "assets/images/awards/award-03.webp"],
+    ["Top Performer Trophy", "assets/images/awards/award-04.webp"],
+    ["Certificate of Appreciation", "assets/images/awards/award-05.webp"],
+    ["Performance Trophy", "assets/images/awards/award-06.webp"],
+    ["Top Performer Award", "assets/images/awards/award-07.webp"],
+    ["Financial Services Recognition", "assets/images/awards/award-08.webp"]
+  ],
   testimonials: Array.from({ length: 5 }, (_, index) => [
     `Sample testimonial ${index + 1}`,
     "Sample testimonial - replace before publishing."
@@ -137,6 +147,70 @@ if (testimonialsRoot) {
   testimonialsRoot.innerHTML = SITE_CONFIG.testimonials
     .map(([name, quote]) => `<article class="testimonial-card"><h3>${name}</h3><p>${quote}</p></article>`)
     .join("");
+}
+
+const awardsCarousel = document.querySelector("[data-awards-carousel]");
+const awardsTrack = document.querySelector("[data-awards-track]");
+const awardsDots = document.querySelector("[data-awards-dots]");
+
+if (awardsCarousel && awardsTrack && awardsDots) {
+  let awardIndex = 0;
+  let autoplayId;
+
+  awardsTrack.innerHTML = SITE_CONFIG.awards
+    .map(([title, image], index) => `
+      <article class="award-slide" aria-label="${title}">
+        <div class="award-frame">
+          <img src="${image}" alt="${title}" width="1600" height="1200" loading="eager">
+        </div>
+        <p>${title}</p>
+      </article>
+    `)
+    .join("");
+
+  awardsDots.innerHTML = SITE_CONFIG.awards
+    .map((_, index) => `<button type="button" data-awards-dot="${index}" aria-label="Show award ${index + 1}"></button>`)
+    .join("");
+
+  const dotButtons = [...awardsDots.querySelectorAll("button")];
+  const updateAwards = (nextIndex) => {
+    awardIndex = (nextIndex + SITE_CONFIG.awards.length) % SITE_CONFIG.awards.length;
+    awardsTrack.style.transform = `translateX(-${awardIndex * 100}%)`;
+    dotButtons.forEach((button, index) => {
+      button.classList.toggle("is-active", index === awardIndex);
+      button.setAttribute("aria-current", index === awardIndex ? "true" : "false");
+    });
+  };
+
+  const stopAutoplay = () => window.clearInterval(autoplayId);
+  const startAutoplay = () => {
+    stopAutoplay();
+    autoplayId = window.setInterval(() => updateAwards(awardIndex + 1), 4200);
+  };
+
+  document.querySelector("[data-awards-prev]")?.addEventListener("click", () => {
+    updateAwards(awardIndex - 1);
+    startAutoplay();
+  });
+
+  document.querySelector("[data-awards-next]")?.addEventListener("click", () => {
+    updateAwards(awardIndex + 1);
+    startAutoplay();
+  });
+
+  dotButtons.forEach((button, index) => {
+    button.addEventListener("click", () => {
+      updateAwards(index);
+      startAutoplay();
+    });
+  });
+
+  awardsCarousel.addEventListener("pointerenter", stopAutoplay);
+  awardsCarousel.addEventListener("pointerleave", startAutoplay);
+  awardsCarousel.addEventListener("focusin", stopAutoplay);
+  awardsCarousel.addEventListener("focusout", startAutoplay);
+  updateAwards(0);
+  startAutoplay();
 }
 
 const leadForm = document.querySelector("[data-lead-form]");

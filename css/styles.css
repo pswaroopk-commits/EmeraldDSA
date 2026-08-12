@@ -1649,6 +1649,163 @@ main h1 {
   box-shadow: 0 18px 50px rgba(7, 25, 47, 0.1);
 }
 
+.awards-section {
+  position: relative;
+  overflow: hidden;
+  color: var(--paper);
+  background:
+    radial-gradient(circle at 12% 18%, rgba(214, 163, 58, 0.22), transparent 28%),
+    radial-gradient(circle at 88% 78%, rgba(22, 76, 124, 0.35), transparent 34%),
+    linear-gradient(135deg, #07192f 0%, #0c2a4d 58%, #061324 100%);
+}
+
+.awards-section .eyebrow {
+  color: var(--gold-soft);
+}
+
+.awards-section h2 {
+  color: var(--paper);
+}
+
+.awards-section p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.awards-layout {
+  display: grid;
+  gap: 30px;
+  align-items: center;
+}
+
+.awards-copy {
+  max-width: 560px;
+}
+
+.awards-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.awards-stats span {
+  display: grid;
+  gap: 3px;
+  min-height: 82px;
+  align-content: center;
+  padding: 16px;
+  border: 1px solid rgba(246, 217, 133, 0.24);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 0.86rem;
+  font-weight: 650;
+}
+
+.awards-stats strong {
+  color: var(--gold-soft);
+  font-size: 1.16rem;
+}
+
+.awards-carousel {
+  display: grid;
+  gap: 16px;
+  min-width: 0;
+}
+
+.awards-viewport {
+  overflow: hidden;
+  border: 1px solid rgba(246, 217, 133, 0.28);
+  border-radius: 8px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04)),
+    rgba(255, 255, 255, 0.07);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.28);
+}
+
+.awards-track {
+  display: flex;
+  transition: transform 520ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.award-slide {
+  display: grid;
+  flex: 0 0 100%;
+  gap: 12px;
+  min-width: 0;
+  padding: 18px;
+}
+
+.award-frame {
+  display: grid;
+  height: clamp(360px, 43vw, 560px);
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(214, 163, 58, 0.08)),
+    #07192f;
+}
+
+.award-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 24px 38px rgba(0, 0, 0, 0.28));
+}
+
+.award-slide p {
+  margin: 0;
+  color: var(--gold-soft);
+  font-weight: 760;
+  text-align: center;
+}
+
+.awards-controls {
+  display: grid;
+  grid-template-columns: 42px 1fr 42px;
+  gap: 12px;
+  align-items: center;
+}
+
+.awards-nav {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  color: var(--midnight);
+  border: 1px solid rgba(246, 217, 133, 0.52);
+  border-radius: 50%;
+  background: linear-gradient(180deg, #fff1ba, var(--gold));
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+  font-size: 1.7rem;
+  line-height: 1;
+}
+
+.awards-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.awards-dots button {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.34);
+  cursor: pointer;
+}
+
+.awards-dots button.is-active {
+  width: 30px;
+  background: var(--gold-soft);
+}
+
 .achievement-band {
   color: var(--paper);
   background:
@@ -1963,6 +2120,10 @@ main h1 {
     grid-template-columns: repeat(4, 1fr);
   }
 
+  .awards-layout {
+    grid-template-columns: minmax(280px, 0.46fr) minmax(0, 0.74fr);
+  }
+
   .faq-layout {
     grid-template-columns: minmax(300px, 0.42fr) 1fr;
     align-items: start;
@@ -2016,6 +2177,30 @@ main h1 {
 
   .insurance-callout span {
     text-align: center;
+  }
+
+  .awards-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .awards-section {
+    padding-bottom: 112px;
+  }
+
+  .award-slide {
+    padding: 12px;
+  }
+
+  .award-slide p {
+    order: -1;
+  }
+
+  .award-frame {
+    height: 420px;
+  }
+
+  .awards-controls {
+    order: -1;
   }
 
   .faq-intro {
