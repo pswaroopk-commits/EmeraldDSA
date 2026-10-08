@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://emerald-dsa.p-swaroopk.workers.dev/sitemap.xml
+Sitemap: https://emeralddsa.com/sitemap.xml

@@ -18,5 +18,3 @@
 - Provide approved customer testimonials with customer permission, name or initials, location and loan type.
 - Review and approve disclaimer wording.
 - Review and approve privacy wording.
-- Confirm preferred canonical domain.
-- Replace placeholder canonical, Open Graph, sitemap and robots URLs with the final live domain.
